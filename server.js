@@ -3,11 +3,17 @@ import dotenv from "dotenv"
 import colors from "colors"
 import expressEjsLayouts from "express-ejs-layouts"
 import studentsRouter from "./routes/studentsRouter.js"
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get __filename and __dirname manually
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // config express
 const app = express()
 // Serve static files (optional)
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")));
 
 
 // json data and url config

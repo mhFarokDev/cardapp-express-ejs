@@ -1,0 +1,21 @@
+
+<div class="card w-50 m-auto my-5">
+    <div class="card-header"><h2>All Students Here</h2></div>
+    <a href="/"><button class="btn btn-primary my-3 mx-3">Back</button></a>
+    <div class="card-body">
+        <form action="/editsinglestudents" method="post" enctype="multipart/form-data">
+            <input type="text" name="id" id="" class="form-control my-3 d-none" placeholder="Name" value="<%= editData.id %>">
+            <input type="text" name="name" id="" class="form-control my-3" placeholder="Name" value="<%= editData.name %>">
+        <input type="text" name="email" id="" class="form-control my-3" placeholder="Email" value="<%= editData.email %>">
+        <input type="text" name="call" id="" class="form-control my-3" placeholder="Call" value="<%= editData.call %>">
+        <input type="file" id="img" class="form-control d-none" name="profile-picture">
+            <label for="img">
+                <img src="/images/<%= editData.image %>" alt="" style="width:100px; height:100px; cursor: pointer;object-fit: cover;" class="viewImage">
+            </label>
+        <div class="mt-4 d-flex justify-content-end">
+            <input type="submit" name="" id="" value="Add user" class="btn btn-success">
+        </div>
+        </form>
+    </div>
+</div>
+

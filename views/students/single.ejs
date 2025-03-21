@@ -1,0 +1,14 @@
+
+<div class="card w-25 m-auto my-5">
+    <div class="card-header"><h2>Student single view.</h2></div>
+    <a href="/"><button class="btn btn-primary my-3 mx-3">Back</button></a>
+    <div class="card-body">
+        <img src="/images/<%- student.image %>" alt="" class="card-img">
+    </div>
+    <div class="card-footer">
+        <h3><b>Name : </b> <%- student.name %> </h3>
+        <h4><b>E-mail : <a href="mailto: <%- student.email %> "> </b> <%- student.email %></a> </h4>
+        <h4><b>Call : </b> <a href="tel:<%- student.call %>"><%- student.call %> </a></h4>
+    </div>
+</div>
+

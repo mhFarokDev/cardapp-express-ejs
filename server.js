@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 // env config
 dotenv.config()
-const PORT = process.env.SERVER_PORT
+const PORT = process.env.SERVER_PORT || 5050
 
 
 // ejs setup

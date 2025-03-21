@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 // config express
 const app = express()
 // Serve static files (optional)
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 // json data and url config
@@ -21,12 +21,12 @@ app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 // env config
 dotenv.config()
-const PORT = process.env.SERVER_PORT || 5050
+const PORT = process.env.SERVER_PORT || 3000
 
 
 // ejs setup
 app.set("view engine", "ejs")
-
+app.set("views", path.join(__dirname, "views"))
 // express ejs layouit
 app.use(expressEjsLayouts)
 

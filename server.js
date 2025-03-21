@@ -29,12 +29,12 @@ app.set("view engine", "ejs")
 
 // express ejs layouit
 app.use(expressEjsLayouts)
-app.set("layout", "main/layout")
+
 
 
 // router setup
 app.use("/", studentsRouter)
-
+app.set("layout", path.join(__dirname, "views/main/layout"))
 
 
 
